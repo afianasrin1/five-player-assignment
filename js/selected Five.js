@@ -16,7 +16,6 @@ function inputField(field) {
   const inputFieldValue = document.getElementById(field);
   const inputFieldValueString = inputFieldValue.value;
   const inputFieldValueConvert = parseInt(inputFieldValueString);
-  inputFieldValue.value = "";
   return inputFieldValueConvert;
 }
 
@@ -26,28 +25,28 @@ function setValue(previusValue, newValue) {
 }
 
 document
-  .getElementById("calculate-total")
+  .getElementById("calculate-button-total")
   .addEventListener("click", function () {
     const playerExpenses = document.getElementById("player-expenses");
     const playerExpensesString = playerExpenses.innerText;
     const playerExpensesStringConvert = parseInt(playerExpensesString);
     const menagerField = inputField("manager");
     const coachField = inputField("coach");
-    const totalAmount = playerExpensesStringConvert + menagerField + coachField;
+    const totalAmout = playerExpensesStringConvert + menagerField + coachField;
 
     if (playerExpenses.innerText === "") {
       alert("Please field the per player cost !!");
     } else if (menagerField > 0 && coachField > 0) {
-      setValue("total-balance", totalAmount);
+      setValue("total-balance", totalAmout);
     } else {
-      alert("Please input your per player cost !!");
+      alert("Please input your valid number !!");
     }
   });
 
 const nameArray = [];
 
 function selectPlayer(array) {
-  const playerAdded = document.getElementById("player-add");
+  const playerAdded = document.getElementById("player-added");
   playerAdded.innerHTML = "";
 
   for (let i = 0; i < array.length; i++) {
@@ -71,12 +70,12 @@ function selectPlayer(array) {
       .addEventListener("click", function () {
         const perPlayerCost = inputField("per-player");
         const selectedPlayer = playerNumber + 1;
-        const playerExpensesAmount = perPlayerCost * selectedPlayer;
+        const selected = perPlayerCost * selectedPlayer;
 
         if (perPlayerCost > 0) {
-          setValue("player-expenses", playerExpensesAmount);
+          setValue("player-expenses", selected);
         } else {
-          alert("Please input your valid cost  !!");
+          alert("Please input your number !!");
         }
       });
   }
