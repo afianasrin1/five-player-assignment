@@ -4,184 +4,193 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top 9 players are named with pic on my website</title>
-    <!-- font awesome Kit -->
-    <script
-      src="https://kit.fontawesome.com/6ca4d0c061.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- tailwind cdn  daisyUI Link  -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- daisyUI Link  -->
+    <title>Best Five Player</title>
+    <!--tailwind css & daisyUI CSS  link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
+
   <body>
-    <header>
-      <h1 class="bg-gray-700 text-center text-5xl font-bold py-20 text-white">
-        Top 9 players are named with pic on my website
-        <img class="w-20 inline-block" src="images/Football.jpg" alt="" />
-      </h1>
+    <!------header start---------->
+    <header class="bg-gray-600 grid grid-cols-3 pt-6">
+      <div class="pt-8">
+        <div class="absolute pl-0 pr-96 pb-0">
+          <img src="images/path56.png" alt="" />
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="pb-8 font-bold italic text-5xl text-orange-500">
+          Select Your Best Five
+          <img class="w-60 pt-5 ml-16" src="images/Line Marker.png" alt="" />
+        </h1>
+      </div>
+      <div>
+        <div class="pl-12 pt-5">
+          <img src="images/hader-card-pic.png" alt="" />
+        </div>
+        <div>
+          <div class="absolute pr-0 pl-96 pt-36">
+            <img src="images/header-football.png" alt="" />
+          </div>
+          <img class="ml-auto w-40" src="images/Rectangle 57.png" alt="" />
+        </div>
+      </div>
     </header>
-    <section class="bg-gray-600">
-      <div class="grid grid-cols-2 gap-4 w-10/12 mx-auto">
-        <!-- start All card side 3 column-->
-        <div class="grid grid-cols-3 gap-4 w-9/6 py-8">
-          <!-- start card 1 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/Cristiano Ronaldo.jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Cristiano Ronaldo</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
+    <!------header ends------>
+
+    <!-----main sectin start----->
+
+    <main id="main-section" class="bg-slate-500 flex py-16 px-24 gap-8">
+      <!-- card start  -->
+      <section class="w-9/12 gap-5 grid grid-cols-3">
+        <!-- start cart-1 -->
+        <div class="w-full bg-gray-600 border-2 border-gray-700">
+          <figure class="">
+            <img
+              src="images/Cristiano Ronaldo.jpg"
+              alt="player"
+              class="w-full"
+            />
+          </figure>
+          <div class="py-4 px-4 text-center text-white">
+            <h2 class="font-semibold text-3xl player-name">
+              Cristiano Ronaldo
+            </h2>
+            <p class="py-3">
+              <span class="text-gray-400">36 Goals</span>
+              <span class="text-4xl pl-1">.</span>
+              <span class="text-gray-400">120 Assist</span>
+            </p>
+            <div class="text-center pb-2 pt-2">
+              <button
+                id="disabled"
+                class="w-10/12 bg-blue-400 hover:bg-blue-600 select-button font-semibold py-2"
+              >
+                SELECT
+              </button>
             </div>
           </div>
-          <!-- start card 2 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/David Beckham .jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">David Beckham</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 3 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/Fernando Torres.jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Fernando Torres</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 4 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img src="images/Kaka.jpg" class="w-full h-40" alt="Shoes" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Kaka</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 5 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/lionel Messi .jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">lionel Messi</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 6 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/Philipp Lahm.jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Philipp Lahm</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 7 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/Samuel Eto'o.jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Samuel Eto'o</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 8 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/Sergio Aguero.jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Sergio Aguero</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- start card 9 -->
-          <div class="card card-compact w-full bg-gray-200 shadow-xl">
-            <figure>
-              <img
-                src="images/Wayne Rooney.jpg"
-                class="w-full h-40"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Wayne Rooney</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- card End -->
         </div>
 
-        <!-- start Select & calculate Side -->
-        <div>selected player</div>
-      </div>
-    </section>
-    <footer>
-      <hr />
-      <h1 class="bg-gray-700 text-center font-thin py-6 text-white">
-        Copyright@2022AllRightsReserved.
-      </h1>
+        <!-- start cart-2 -->
+
+        <div class="w-full bg-gray-600 border-2 border-gray-700">
+          <figure class="">
+            <img src="images/Fernando Torres.jpg" alt="player" class="w-full" />
+          </figure>
+          <div class="py-4 px-4 text-center text-white">
+            <h2 class="font-semibold text-3xl player-name">Fernando Torres</h2>
+            <p class="py-3">
+              <span class="text-gray-400">36 Goals</span>
+              <span class="text-4xl pl-1">.</span>
+              <span class="text-gray-400">120 Assist</span>
+            </p>
+            <div class="text-center pb-2 pt-2">
+              <button
+                class="w-10/12 bg-blue-400 hover:bg-blue-600 select-button font-semibold py-2"
+              >
+                SELECT
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- start cart-3 -->
+        <div class="w-full bg-gray-600 border-2 border-gray-700">
+          <figure class="">
+            <img src="images/David Beckham .jpg" alt="player" class="w-full" />
+          </figure>
+          <div class="py-4 px-4 text-center text-white">
+            <h2 class="font-semibold text-3xl player-name">David Beckham</h2>
+            <p class="py-3">
+              <span class="text-gray-400">36 Goals</span>
+              <span class="text-4xl pl-1">.</span>
+              <span class="text-gray-400">120 Assist</span>
+            </p>
+            <div class="text-center pb-2 pt-2">
+              <button
+                class="w-10/12 bg-blue-400 hover:bg-blue-600 select-button font-semibold py-2"
+              >
+                SELECT
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- card ends  -->
+      <!-- a side start  -->
+      <section>
+        <section>
+          <div class="bg-blue-800 text-center w-80 py-4">
+            <h1 class="text-white text-2xl font-semibold">
+              Selected - V
+              <img
+                class="ml-auto mr-auto mt-2"
+                src="images/Ureg-Ureg Marker.png"
+                alt=""
+              />
+            </h1>
+
+            <div class="pt-5 pb-4 text-left text-gray-400 font-bold">
+              <div class="px-8">
+                <ol id="player-added" class="list-decimal"></ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section>
+                <div class="bg-blue-800  w-80 px-4  py-4 mt-8">
+                    <h1 class="text-white text-center text-2xl font-semibold  "> Budget</h1><img
+                        class="ml-auto mr-auto mt-2" src="images/Ureg-Ureg Marker.png" alt=""></h1>
+
+                    <div class="pt-8">
+                        <p class="pb-8"><span class="text-gray-200 pr-3 font-semibold">Per Player :</span> <input
+                                placeholder="Type Here" class="bg-gray-900 w-1/3 py-1 pl-2 outline-none" id="per-player"
+                                type="text"></p>
+                        <button id="calculate-button"
+                            class="w-full bg-orange-500 text-white  font-semibold py-2">Calculate
+                        </button>
+                        <h1 class="text-gray-300 text-xl py-3 pb-8 font-semibold pt-5">Player Expenses : $<span
+                                id="player-expenses">0</span>.00
+                        </h1>
+                        <p class="pb-3"><span class="text-gray-200 pr-3 font-semibold">Manager :</span> <input
+                                placeholder="Type Here" class="bg-gray-900 py-1 pl-2 w-1/3 outline-none" id="manager"
+                                type="text"></p>
+
+                        <p class="pb-8"><span class="text-gray-200  font-semibold pr-8">Coach :</span> <input
+                                placeholder="Type Here" class="bg-gray-900 w-1/3 pl-2 py-1 outline-none" id="coach"
+                                type="text"></p>
+
+                        <button id="calculate-button-total"
+                            class="w-full bg-orange-500 text-white  font-semibold py-2">Calculate Total
+                        </button>
+
+                        <h1 class="pb-8 pt-5 text-2xl font-semibold flex justify-between "><span
+                                class=" text-gray-300">Total</span>
+                            <span class=" text-orange-500">$<span id="total-balance">0</span>.00</span>
+                        </h1>
+                    </div>
+
+                </div>
+            </section> -->
+        <!-- a side ends  -->
+      </section>
+    </main>
+    <!----main section ends-->
+
+    <!------footer section start--------->
+    <footer
+      class="bg-blue-800 text-white text-center border-t-2 border-gray-500 py-16"
+    >
+      <p>Copyright @ 2022 All Rights Reserved</p>
     </footer>
+    <!----footer section ends------->
+    <!------ js file link  ---->
+    <script src="js/selected Five.js"></script>
   </body>
 </html>
