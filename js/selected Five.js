@@ -16,6 +16,7 @@ function inputField(field) {
   const inputFieldValue = document.getElementById(field);
   const inputFieldValueString = inputFieldValue.value;
   const inputFieldValueConvert = parseInt(inputFieldValueString);
+  inputFieldValue.value = "";
   return inputFieldValueConvert;
 }
 
@@ -32,14 +33,14 @@ document
     const playerExpensesStringConvert = parseInt(playerExpensesString);
     const menagerField = inputField("manager");
     const coachField = inputField("coach");
-    const totalAmout = playerExpensesStringConvert + menagerField + coachField;
+    const totalAmount = playerExpensesStringConvert + menagerField + coachField;
 
     if (playerExpenses.innerText === "") {
       alert("Please field the per player cost !!");
     } else if (menagerField > 0 && coachField > 0) {
-      setValue("total-balance", totalAmout);
+      setValue("total-balance", totalAmount);
     } else {
-      alert("Please input your valid number !!");
+      alert("Please input your per player cost !!");
     }
   });
 
@@ -70,12 +71,12 @@ function selectPlayer(array) {
       .addEventListener("click", function () {
         const perPlayerCost = inputField("per-player");
         const selectedPlayer = playerNumber + 1;
-        const selected = perPlayerCost * selectedPlayer;
+        const playerExpensesAmount = perPlayerCost * selectedPlayer;
 
         if (perPlayerCost > 0) {
-          setValue("player-expenses", selected);
+          setValue("player-expenses", playerExpensesAmount);
         } else {
-          alert("Please input your number !!");
+          alert("Please input your valid cost  !!");
         }
       });
   }
