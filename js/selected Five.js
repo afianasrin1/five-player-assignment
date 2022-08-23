@@ -16,7 +16,7 @@ function inputField(field) {
   const inputFieldValue = document.getElementById(field);
   const inputFieldValueString = inputFieldValue.value;
   const inputFieldValueConvert = parseInt(inputFieldValueString);
-  inputFieldValue.value = "";
+  // inputFieldValue.value = "";
   return inputFieldValueConvert;
 }
 
