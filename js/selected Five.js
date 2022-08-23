@@ -1,8 +1,8 @@
 const selectAllButton = document.querySelectorAll(".select-button");
-for (select of selectAllButton) {
+for (const select of selectAllButton) {
   select.addEventListener("click", function (event) {
     event.target.disabled = true;
-    event.target.style.background = "orange";
+    event.target.style.background = "gray";
     const name = event.target.parentNode.parentNode.children[0].innerText;
     const playerObject = {
       playerName: name,
@@ -11,21 +11,72 @@ for (select of selectAllButton) {
     selectPlayer(nameArray);
   });
 }
+
+function inputField(field) {
+  const inputFieldValue = document.getElementById(field);
+  const inputFieldValueString = inputFieldValue.value;
+  const inputFieldValueConvert = parseInt(inputFieldValueString);
+  return inputFieldValueConvert;
+}
+
+function setValue(previusValue, newValue) {
+  const valueSet = document.getElementById(previusValue);
+  valueSet.innerText = newValue;
+}
+
+document
+  .getElementById("calculate-total")
+  .addEventListener("click", function () {
+    const playerExpenses = document.getElementById("player-expenses");
+    const playerExpensesString = playerExpenses.innerText;
+    const playerExpensesStringConvert = parseInt(playerExpensesString);
+    const menagerField = inputField("manager");
+    const coachField = inputField("coach");
+    const totalAmout = playerExpensesStringConvert + menagerField + coachField;
+
+    if (playerExpenses.innerText === "") {
+      alert("Please field the per player cost !!");
+    } else if (menagerField > 0 && coachField > 0) {
+      setValue("total-balance", totalAmout);
+    } else {
+      alert("Please input your valid number !!");
+    }
+  });
+
 const nameArray = [];
-function selectPlayer() {
-  const playerAdded = document.getElementById("player-added");
+
+function selectPlayer(array) {
+  const playerAdded = document.getElementById("player-add");
   playerAdded.innerHTML = "";
+
   for (let i = 0; i < array.length; i++) {
     const name = nameArray[i].playerName;
+
     const playerNumber = i;
     if (i < 5) {
       const tr = document.createElement("tr");
-      tr.HTML = `<li>${name}</li>`;
+      tr.innerHTML = `
+            
+          <li>${name}</li>
+            
+            `;
       playerAdded.appendChild(tr);
     } else {
-      alert("You cannot add more than 5 player");
+      alert("You cannot add more than 5");
       return playerNumber;
     }
-    document.getElementById;
+    document
+      .getElementById("calculate-button")
+      .addEventListener("click", function () {
+        const perPlayerCost = inputField("per-player");
+        const selectedPlayer = playerNumber + 1;
+        const selected = perPlayerCost * selectedPlayer;
+
+        if (perPlayerCost > 0) {
+          setValue("player-expenses", selected);
+        } else {
+          alert("Please input your number !!");
+        }
+      });
   }
 }
